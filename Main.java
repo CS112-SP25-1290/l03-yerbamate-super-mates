@@ -5,7 +5,7 @@ public class Main
 {
 	public static void main(String[] args)
   	{
-		CaffeinatedBeverage[] inventory = new CaffeinatedBeverage[10];
+        ArrayList<CaffeinatedBeverage> inventory = new ArrayList<>();
 		Scanner scanner = new Scanner(System.in);
 
         try {
@@ -23,7 +23,7 @@ public class Main
                 double price = scanner.nextDouble();
                 System.out.print("Enter brew temperature: ");
                 int brewTemp = scanner.nextInt();
-                //inventory.add(new Tea(name, ounces, price, brewTemp));
+                inventory.add(new Tea(name, ounces, price, brewTemp));
             } else if (choice == 2) {
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
@@ -33,13 +33,13 @@ public class Main
                 double price = scanner.nextDouble();
                 System.out.print("Enter brew temp: ");
                 int brewTemp = scanner.nextInt();
-                //inventory.add(new YerbaMate(name, ounces, price, brewTemp, 0));
+                inventory.add(new YerbaMate(name, ounces, price, brewTemp, 0));
             } else if (choice == 3) {
                 for (CaffeinatedBeverage beverage : inventory) {
                     System.out.println(beverage);
                 }
-                //System.out.println("Average price: $" + String.format("%.2f", findAveragePrice(inventory)));
-                //System.out.println("Most expensive Yerba Mate: " + findHighestPricedYerbaMate(inventory));
+                System.out.println("Average price: $" + String.format("%.2f", findAveragePrice(inventory)));
+                System.out.println("Most expensive Yerba Mate: " + findHighestPricedYerbaMate(inventory));
                 break;
 
             }   }
