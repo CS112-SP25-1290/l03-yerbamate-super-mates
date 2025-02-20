@@ -39,22 +39,27 @@ public class CaffeinatedBeverage
         this.price = price;
     }
 
-    public String toString() {
-        return "Name: " + this.name + "Ounces: " + this.ounces + "Price: " + this.price;
+    public boolean sip(int sipAmount) {
+        if (sipAmount > ounces) {
+            ounces = 0;
+            return false;
+        }
+        ounces = sipAmount;
+        return true;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || this.getClass() != o.getClass()) return false;
+        if (o == null || this.getClass() != o.getClass())
+            return false;
         CaffeinatedBeverage that = (CaffeinatedBeverage) o;
         return this.ounces == that.ounces &&
                 Double.compare(this.price, that.price) == 0 &&
-               this.name.equals(that.name);
+                this.name.equals(that.name);
     }
-
-    public void sip() {
-        if (ounces == 0) {
-        }
-        
+    
+    @Override
+    public String toString() {
+        return "CaffeinatedBeverage: " + name + ", " + ounces + " ounces, $" + String.format("%.2f", price);
     }
 }
