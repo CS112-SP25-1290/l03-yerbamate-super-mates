@@ -4,6 +4,11 @@ public class CaffeinatedBeverage
     private int ounces;
     private double price;
 
+    public CaffeinatedBeverage() {
+        name = "";
+        ounces = 0;
+        price = 0.0;
+    }
     public CaffeinatedBeverage(String name, int ounces, double price) {
         this.name = name;
         this.ounces = ounces;
@@ -34,6 +39,10 @@ public class CaffeinatedBeverage
         this.price = price;
     }
 
+    public String toString() {
+        return "Name: " + this.name + "Ounces: " + this.ounces + "Price: " + this.price;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || this.getClass() != o.getClass()) return false;
@@ -41,5 +50,9 @@ public class CaffeinatedBeverage
         return this.ounces == that.ounces &&
                 Double.compare(this.price, that.price) == 0 &&
                this.name.equals(that.name);
+    }
+
+    public void sip() {
+        
     }
 }
