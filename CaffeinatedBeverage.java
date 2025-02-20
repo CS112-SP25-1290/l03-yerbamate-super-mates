@@ -57,9 +57,13 @@ public class CaffeinatedBeverage
                 Double.compare(this.price, that.price) == 0 &&
                 this.name.equals(that.name);
     }
-    
-    @Override
+
     public String toString() {
-        return "CaffeinatedBeverage: " + name + ", " + ounces + " ounces, $" + String.format("%.2f", price);
+        
+    }
+    public void sip() {
+        if (ounces == 0) {
+        }
+        
     }
 }
