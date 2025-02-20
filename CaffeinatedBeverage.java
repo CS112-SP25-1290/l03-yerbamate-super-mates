@@ -53,6 +53,8 @@ public class CaffeinatedBeverage
     }
 
     public void sip() {
+        if (ounces == 0) {
+        }
         
     }
 }

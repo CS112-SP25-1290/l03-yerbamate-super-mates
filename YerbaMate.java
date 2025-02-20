@@ -7,6 +7,6 @@ public class YerbaMate extends CaffeinatedBeverage {
 
     public YerbaMate(int numPasses) {
         this.numPasses = numPasses;
-
     }
+    
 }

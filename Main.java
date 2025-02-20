@@ -6,6 +6,7 @@ public class Main
   	{
 		CaffeinatedBeverage[] inventory = new CaffeinatedBeverage[10];
 		Scanner keyboard = new Scanner(System.in);
+		ArrayList<CaffeinatedBeverage>
 		// Prompt user with options in a loop
 		int choice, ounces, brewTemp, count = 0;
 		String name;
